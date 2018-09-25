@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+    <div class ="container">
+        <div class="row"></div>
+            <h1 style="text-align:center;">Edit <%= garment.name %></h1>
+            <div style="width:30%; margin:30px auto;">
+                <!-- POST REQUEST, this will use the post route we defined in app.js -->
+                <form action="/garments/<%= garment._id %>?_method=PUT" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="garment[name]" value="<%= garment.name %>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="garment[price]" value="<%= garment.price %>" min="0.01" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="garment[image]" value="<%= garment.image %>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="garment[description]" value="<%= garment.description %>">
+                    </div>
+                    <div class="form-group">
+                        <button class = "btn btn-lg btn-dark btn-block">Submit!</button>
+                    </div>
+                    <a href="/garments">View all garments</a>
+                </form>
+            </div>
+        </div> 
+    </div>
+
+<% include ../partials/footer %>

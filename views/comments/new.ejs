@@ -1,0 +1,21 @@
+<!-- TEMPLATE FOR COMMENTS -->
+<% include ../partials/header %>
+    <div class ="container">
+        <div class="row"></div>
+            <h1 style="text-align:center;">Comment on <%= garment.name %></h1>
+            <div style="width:30%; margin:30px auto;">
+                <!-- POST REQUEST, this will use the post route we defined in app.js -->
+                <form action="/garments/<%= garment._id %>/comments" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="comment[text]" placeholder="text">
+                    </div>
+                    <div class="form-group">
+                        <button class = "btn btn-lg btn-dark btn-block">Submit!</button>
+                    </div>
+                    <a href="/garments">View all garments</a>
+                </form>
+            </div>
+        </div> 
+    </div>
+
+<% include ../partials/footer %>

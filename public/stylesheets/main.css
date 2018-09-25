@@ -1,0 +1,49 @@
+/* all img tags inside of thumbnail */
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail-style img{
+    height: 250px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+/* refactor this later */
+.btn-dark {
+    background-color: #555555;
+    border-color: #555555;
+    color: #FFFFFF;
+    outline: none !important;
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active,
+.btn-dark:active:focus,
+.btn-dark.active:focus {
+    color: #FFFFFF;
+    background-color: #3f3e3e;
+    outline: none !important;
+    border-color: #3f3e3e;
+}
+
+.thumbnail-style {
+    text-align: center;
+}
+
+.view-garments-button{
+    width:100%;
+}
+
+

@@ -1,0 +1,76 @@
+body {
+    background-color: #000000
+}
+
+#landing-header {
+    /* will lay this over any other element that has z index < 1 */
+    z-index: 1;
+    /* position must be relative to use z index */
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+}
+
+#landing-header h1 {
+    font-size:50px;
+    text-shadow: 0 1px 0 black;
+    color: #FFFFFF;
+}
+
+.slideshow { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* put the background image behind the other content */
+    z-index: 0;
+    /* remove bullet point */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slideshow li { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: 0;
+  }
+
+  .slideshow li:nth-child(1) { 
+    background-image: 
+        linear-gradient(
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ),
+        url(https://images.unsplash.com/photo-1529720317453-c8da503f2051?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c538ace3cc227bad5d69c892b484f23a&auto=format&fit=crop&w=1950&q=80) 
+  }
+
+.btn-dark {
+    background-color: #555555;
+    border-color: #555555;
+    color: #FFFFFF;
+    outline: none !important;
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active,
+.btn-dark:active:focus,
+.btn-dark.active:focus {
+    color: #FFFFFF;
+    background-color: #3f3e3e;
+    outline: none !important;
+    border-color: #3f3e3e;
+}
+
+.fa-sign-in-alt {
+    font-size: 5px;
+}
