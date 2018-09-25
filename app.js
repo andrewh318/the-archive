@@ -13,7 +13,6 @@ var express       = require("express"),
 
 // set port for heroku
 var port = process.env.PORT || 3000;
-process.env['DATABASEURL'] = 'mongodb://localhost:27017/the_archive_final';
 
 // requiring routes
 var commentRoutes = require("./routes/comments"),
