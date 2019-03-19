@@ -13,6 +13,7 @@ var express       = require("express"),
 
 // set port for heroku
 var port = process.env.PORT || 3000;
+var databaseURL = process.env.DATABASEURL || "mongodb://localhost:27017/the_archive_final";
 
 // requiring routes
 var commentRoutes = require("./routes/comments"),
@@ -20,7 +21,7 @@ var commentRoutes = require("./routes/comments"),
     indexRoutes   = require("./routes/index");
 
 // local database
-mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true});
+mongoose.connect(databaseURL, { useNewUrlParser: true});
 
 // remote database
 // mongoose.connect("mongodb://andrew:andrewhu123@ds113693.mlab.com:13693/thearchive", { useNewUrlParser: true});
