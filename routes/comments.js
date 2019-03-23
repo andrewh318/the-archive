@@ -25,12 +25,6 @@ router.post("/", middleware.isLoggedIn, function(req,res){
             console.log(err);
             res.redirect("/garments");
         } else {
-            // by packaging up all the comment data from the form into comment[author], comment[title]
-            // we can just pass 'req.body.comment' into the create function
-            // instead of doing var title = req.body.title
-            //                  var author = req.body.author
-            // var newComment = {title: title, author: author}
-            // then passing newComment into create function
             Comment.create(req.body.comment, function(err, comment){
                 if(err){
                     req.flash("error", "Something went wrong");

@@ -1,7 +1,6 @@
 var express = require("express");
 var router = express.Router();
 var Garment = require("../models/garments");
-// if you require a directory , it automatically requires the index.js file 
 var middleware = require("../middleware")
 
 //INDEX - show all garments
@@ -50,11 +49,10 @@ router.get("/new", middleware.isLoggedIn, function(req,res){
     res.render("garments/new");
 })
 
-//SHOW- shows more info about one campground 
+//SHOW- shows more info about one garment 
 //The ":id" is the route parameter, and we can access this via req.params.id
 router.get("/:id",function(req,res){
-    // find the campground with provided ID
-    // findById is a built in mongo function
+    // find the garment with provided ID
     Garment.findById(req.params.id).populate("comments").exec(function(err, foundGarment){
         if(err){
             console.log(err);

@@ -23,10 +23,6 @@ var commentRoutes = require("./routes/comments"),
 // local database
 mongoose.connect(databaseURL, { useNewUrlParser: true});
 
-// remote database
-// mongoose.connect("mongodb://andrew:andrewhu123@ds113693.mlab.com:13693/thearchive", { useNewUrlParser: true});
-
-
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.set("view engine", "ejs");
