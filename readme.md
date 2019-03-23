@@ -1,8 +1,2 @@
-#Wardrobe
-
-* Add landing page
-* Add wardrobe page that lists all garments
-
-Each garment has:
-* Name
-* Image
+## Introduction
+The Archive is a Pinterest-like web app where fashion enthusiasts can upload, discuss and review different garments. The front end is made using HTML/CSS with the help of the EJS templating language. The back end is a simple REST API with NodeJS and Express- combined with MongoDB for the database. This project was created to help me better understand server-side rendering- it is currently not being hosted anywhere.
